@@ -1,0 +1,41 @@
+Switch to Drive H:
+Simply type the drive letter followed by a colon (:) and press Enter:
+H:
+
+
+conda create --name env_name
+conda create --name env_name python=3.10
+conda create --name env_name python=3.10 numpy pandas
+
+conda activate env_name
+conda deactivate
+
+conda env list
+conda remove --name env_name --all
+
+
+conda create --prefix ./env pandas numpy matplotlib
+conda activate ./env
+conda deactivate
+
+Delete the environment folder directly:
+rm -r ./env
+Alternatively, use Conda:
+conda remove --prefix ./env --all
+
+
+conda  install jupyter
+jupyter notebook
+
+conda env export --name your_env_name > environment.yml
+conda activate your_env_name
+
+
+
+conda list
+conda list --export > package_list.txt
+(pip) conda list --export | sed 's/ /==/g' > requirements.txt
+conda env create -f environment.yml
+
+
+
